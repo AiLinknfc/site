@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma NFC para automatización de procesos, redes sociales y fidelización de clientes. Conecta tu negocio al mundo digital sin complicaciones.">
+    <meta name="keywords" content="NFC, automatización, fidelización, procesos digitales, PyMEs, emprendedores">
+    <meta name="author" content="AiLink">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AiLink - Automatización Digital para PyMEs">
+    <meta property="og:description" content="Conecta y presenta tu negocio con tecnología NFC. Automatización de procesos y redes sociales para emprendedores.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nfcconnect.com">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AiLink",
+        "applicationCategory": "BusinessApplication",
+        "description": "Plataforma de automatización digital con tecnología NFC para PyMEs y emprendedores",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "category": "SaaS"
+        }
+    }
+    </script>
+    
+    <title>AiLink - Automatización Digital para tu Negocio</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables - Configuración Global */
+        :root {
+            --color-primary: #B14FFF;
+            --color-secondary: #2781DF;
+            --color-tertiary: #542AAD;
+            --color-white: #FFFFFF;
+            --color-dark: #1a1a1a;
+            --color-gray-light: #f8f9fa;
+            --color-gray-medium: #6c757d;
+            --color-gray-dark: #343a40;
+            
+            --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+            
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            --spacing-3xl: 4rem;
+            
+            --border-radius-sm: 0.375rem;
+            --border-radius-md: 0.5rem;
+            --border-radius-lg: 0.75rem;
+            --border-radius-xl: 1rem;
+            
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            --transition-fast: 0.15s ease-in-out;
+            --transition-normal: 0.3s ease-in-out;
+            --transition-slow: 0.5s ease-in-out;
+        }
+        
+        /* Reset y Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-family-primary);
+            line-height: 1.6;
+            color: var(--color-dark);
+            background-color: var(--color-white);
+            overflow-x: hidden;
+        }
+        
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10000;
+            border-radius: var(--border-radius-sm);
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        h1 { font-size: var(--font-size-4xl); }
+        h2 { font-size: var(--font-size-3xl); }
+        h3 { font-size: var(--font-size-2xl); }
+        h4 { font-size: var(--font-size-xl); }
+        h5 { font-size: var(--font-size-lg); }
+        h6 { font-size: var(--font-size-base); }
+        
+        p {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-gray-medium);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border: none;
+            border-radius: var(--border-radius-md);
+            font-size: var(--font-size-base);
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left var(--transition-slow);
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: var(--color-white);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background: var(--color-white);
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            transition: all var(--transition-normal);
+        }
+        
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--spacing-md) 0;
+        }
+        
+        .logo {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .logo::before {
+
+          width: 50px;
+          height: 50px; 
+          background-image: url('Logo redes.jpg');
+          background-size: contain; 
+          background-repeat: no-repeat; 
+          background-position: center; 
+
+            content: '';
+            font-size: var(--font-size-2xl);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--color-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-primary);
+            transition: width var(--transition-normal);
+        }
+        
+        .nav-link:hover::after,
+        .nav-link:focus::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover,
+        .nav-link:focus {
+            color: var(--color-primary);
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: var(--spacing-sm);
+            background: none;
+            border: none;
+            z-index: 1001;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-dark);
+            margin: 3px 0;
+            transition: all var(--transition-normal);
+            border-radius: 2px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-tertiary) 100%);
+            color: var(--color-white);
+            padding: calc(80px + var(--spacing-3xl)) 0 var(--spacing-3xl);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: moveGrid 20s linear infinite;
+            opacity: 0.3;
+        }
+        
+        @keyframes moveGrid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(10px, 10px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: var(--font-size-5xl);
+            margin-bottom: var(--spacing-lg);
+            animation: slideInUp 0.8s ease-out;
+        }
+        
+        .hero p {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-2xl);
+            color: rgba(255, 255, 255, 0.9);
+            animation: slideInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInUp 0.8s ease-out 0.4s both;
+        }
+        
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Features Section */
+        .features {
+            padding: var(--spacing-3xl) 0;
+            background: var(--color-gray-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+        
+        .section-title {
+            color: var(--color-dark);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .section-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--color-gray-medium);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-2xl);
+        }
+        
+        .feature-card {
+            background: var(--color-white);
+            padding: var(--spacing-2xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            border: 1px solid rgba(177, 79, 255, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            border-radius: var(--border-radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .feature-card h3 {
+            color: var(--color-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        /* Product Carousel */
+        .product-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--color-white);
+        }
+        
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .carousel {
+            display: flex;
+            transition: transform var(--transition-slow);
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .carousel-slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .carousel-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--color-white);
+            padding: var(--spacing-2xl);
+        }
+        
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-gray-medium);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            border: none;
+        }
+        
+        .carousel-dot.active {
+            background: var(--color-primary);
+            transform: scale(1.2);
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: var(--font-size-lg);
+            color: var(--color-dark);
+            transition: all var(--transition-fast);
+            z-index: 10;
+        }
+        
+        .carousel-btn:hover {
+            background: var(--color-white);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .carousel-btn.prev {
+            left: var(--spacing-md);
+        }
+        
+        .carousel-btn.next {
+            right: var(--spacing-md);
+        }
+        
+        /* About Section */
+        .about {
+            padding: var(--spacing-3xl) 0;
+            background: var(--color-gray-light);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            color: var(--color-dark);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        /* News Section */
+        .news {
+            padding: var(--spacing-3xl) 0;
+            background: var(--color-white);
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-2xl);
+        }
+        
+        .news-card {
+            background: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .news-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-image::before {
+            content: '📰';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+        
+        .news-content {
+            padding: var(--spacing-lg);
+        }
+        
+        .news-date {
+            color: var(--color-primary);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .news-card h3 {
+            color: var(--color-dark);
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--font-size-lg);
+        }
+        
+        .news-card p {
+            color: var(--color-gray-medium);
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .read-more {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            transition: all var(--transition-fast);
+        }
+        
+        .read-more:hover {
+            gap: var(--spacing-sm);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--color-tertiary), var(--color-primary));
+            color: var(--color-white);
+            padding: var(--spacing-3xl) 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .cta p {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-2xl);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--color-dark);
+            color: var(--color-white);
+            padding: var(--spacing-3xl) 0 var(--spacing-lg);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .footer-section h3 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .footer-section a:hover {
+            color: var(--color-primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 500;
+            color: var(--color-dark);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 2px solid rgba(177, 79, 255, 0.2);
+            border-radius: var(--border-radius-md);
+            font-size: var(--font-size-base);
+            transition: all var(--transition-fast);
+            background: var(--color-white);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(177, 79, 255, 0.1);
+        }
+        
+        /* Lazy Loading */
+        .lazy-load {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .lazy-load.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background: var(--color-white);
+                flex-direction: column;
+                justify-content: center;
+                transition: right var(--transition-normal);
+                box-shadow: var(--shadow-xl);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .carousel-btn {
+                display: none;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--spacing-sm);
+            }
+            
+            .hero h1 {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .btn {
+                padding: var(--spacing-sm) var(--spacing-md);
+                font-size: var(--font-size-sm);
+            }
+        }
+        
+        /* Focus Styles for Accessibility */
+        *:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+        
+        /* High Contrast Mode Support */
+        @media (prefers-contrast: high) {
+            :root {
+                --color-gray-medium: #000000;
+            }
+        }
+        
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar container" role="navigation" aria-label="Navegación principal">
+            <a href="#" class="logo" aria-label="AiLink - Inicio">AiLink</a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#caracteristicas" class="nav-link">Características</a></li>
+                <li><a href="#producto" class="nav-link">Producto</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#noticias" class="nav-link">Noticias</a></li>
+                <li><a href="#contacto" class="btn btn-primary">Contacto</a></li>
+            </ul>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menú de navegación" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title">Conecta tu Negocio al Futuro Digital</h1>
+                    <p>Automatiza procesos, fideliza clientes y expande tu presencia digital con nuestra innovadora tecnología NFC. Ideal para PyMEs, emprendedores y microempresarios que buscan optimizar su negocio.</p>
+                    <div class="hero-cta">
+                        <a href="#producto" class="btn btn-primary" aria-describedby="cta-description">Descubre Nuestro Producto</a>
+                        <a href="#demo" class="btn btn-secondary">Ver Demo Gratuito</a>
+                    </div>
+                    <div id="cta-description" class="sr-only">Conoce cómo nuestra tecnología NFC puede transformar tu negocio</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features" id="caracteristicas" aria-labelledby="features-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="features-title" class="section-title">¿Por qué elegir AiLink?</h2>
+                    <p class="section-subtitle">Ofrecemos soluciones completas de automatización digital diseñadas específicamente para empresarios y emprendedores que buscan innovar.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <article class="feature-card lazy-load">
+                        <div class="feature-icon" aria-hidden="true">🚀</div>
+                        <h3>Automatización de Procesos</h3>
+                        <p>Optimiza workflows empresariales, reduce tiempos operativos y mejora la eficiencia con nuestro sistema BPM integrado.</p>
+                    </article>
+                    
+                    <article class="feature-card lazy-load">
+                        <div class="feature-icon" aria-hidden="true">📱</div>
+                        <h3>Gestión de Redes Sociales</h3>
+                        <p>Automatiza publicaciones, programa contenido y gestiona múltiples plataformas desde un solo panel de control.</p>
+                    </article>
+                    
+                    <article class="feature-card lazy-load">
+                        <div class="feature-icon" aria-hidden="true">💳</div>
+                        <h3>Fidelización de Clientes</h3>
+                        <p>Implementa programas de lealtad, cupones digitales y sistemas de recompensas utilizando tecnología NFC.</p>
+                    </article>
+                    
+                    <article class="feature-card lazy-load">
+                        <div class="feature-icon" aria-hidden="true">🌐</div>
+                        <h3>Presencia Digital Instantánea</h3>
+                        <p>Crea tu bio digital, conecta con sistemas de pago y establece tu presencia online sin necesidad de programar.</p>
+                    </article>
+                    
+                    <article class="feature-card lazy-load">
+                        <div class="feature-icon" aria-hidden="true">📊</div>
+                        <h3>Analytics Avanzados</h3>
+                        <p>Obtén insights detallados sobre el comportamiento de clientes, conversiones y ROI de tus campañas digitales.</p>
+                    </article>
+                    
+                    <article class="feature-card lazy-load">
+                        <div class="feature-icon" aria-hidden="true">🔒</div>
+                        <h3>Seguridad Empresarial</h3>
+                        <p>Protección de datos de grado bancario, cumplimiento GDPR y cifrado end-to-end para toda tu información.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Carousel Section -->
+        <section class="product-section" id="producto" aria-labelledby="product-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="product-title" class="section-title">Nuestro Dispositivo NFC</h2>
+                    <p class="section-subtitle">Descubre cómo nuestro innovador dispositivo NFC revoluciona la forma en que conectas con tus clientes.</p>
+                </div>
+                
+                <div class="carousel-container">
+                    <div class="carousel" id="carousel" role="region" aria-label="Galería de productos NFC">
+                        <div class="carousel-slide">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23B14FFF'/%3E%3Cstop offset='100%25' style='stop-color:%232781DF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23bg)'/%3E%3Ccircle cx='400' cy='200' r='80' fill='rgba(255,255,255,0.2)' stroke='white' stroke-width='3'/%3E%3Ctext x='400' y='210' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3ENFC%3C/text%3E%3Ctext x='400' y='320' text-anchor='middle' fill='white' font-size='18'%3EDispositivo Principal%3C/text%3E%3C/svg%3E" alt="Dispositivo NFC principal - Conectividad avanzada" loading="lazy">
+                            <div class="carousel-content">
+                                <h3>Dispositivo NFC Principal</h3>
+                                <p>Nuestro dispositivo flagship con conectividad avanzada, batería de larga duración y compatibilidad universal.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cdefs%3E%3ClinearGradient id='bg2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232781DF'/%3E%3Cstop offset='100%25' style='stop-color:%23542AAD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23bg2)'/%3E%3Crect x='300' y='150' width='200' height='100' rx='15' fill='rgba(255,255,255,0.2)' stroke='white' stroke-width='3'/%3E%3Ctext x='400' y='210' text-anchor='middle' fill='white' font-size='20' font-family='Arial'%3ENFC Card%3C/text%3E%3Ctext x='400' y='320' text-anchor='middle' fill='white' font-size='18'%3ETarjeta Inteligente%3C/text%3E%3C/svg%3E" alt="Tarjeta NFC inteligente - Formato compacto" loading="lazy">
+                            <div class="carousel-content">
+                                <h3>Tarjeta NFC Inteligente</h3>
+                                <p>Formato compacto ideal para networking, tarjetas de presentación digitales y acceso rápido a información.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cdefs%3E%3ClinearGradient id='bg3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23542AAD'/%3E%3Cstop offset='100%25' style='stop-color:%23B14FFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23bg3)'/%3E%3Ccircle cx='400' cy='200' r='60' fill='rgba(255,255,255,0.2)' stroke='white' stroke-width='3'/%3E%3Ccircle cx='400' cy='200' r='30' fill='white' opacity='0.3'/%3E%3Ctext x='400' y='320' text-anchor='middle' fill='white' font-size='18'%3ETag NFC Premium%3C/text%3E%3C/svg%3E" alt="Tag NFC premium - Adhesivo inteligente" loading="lazy">
+                            <div class="carousel-content">
+                                <h3>Tag NFC Premium</h3>
+                                <p>Adhesivos inteligentes para productos, mesas, displays y puntos de interacción personalizados.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn prev" id="prevBtn" aria-label="Imagen anterior">‹</button>
+                    <button class="carousel-btn next" id="nextBtn" aria-label="Imagen siguiente">›</button>
+                </div>
+                
+                <div class="carousel-nav" role="tablist" aria-label="Navegación del carrusel">
+                    <button class="carousel-dot active" data-slide="0" role="tab" aria-label="Ver dispositivo principal"></button>
+                    <button class="carousel-dot" data-slide="1" role="tab" aria-label="Ver tarjeta inteligente"></button>
+                    <button class="carousel-dot" data-slide="2" role="tab" aria-label="Ver tag premium"></button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="about" id="nosotros" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 id="about-title">Quiénes Somos</h2>
+                        <p>Somos un equipo apasionado de innovadores tecnológicos dedicados a democratizar el acceso a herramientas digitales avanzadas para pequeñas y medianas empresas.</p>
+                        <p>Fundada por emprendedores que entienden los desafíos del mundo empresarial moderno, AiLink nació de la necesidad de brindar soluciones tecnológicas accesibles y efectivas.</p>
+                        <p>Nuestra misión es empoderar a cada empresario con las herramientas digitales necesarias para competir en el mercado actual, sin las complejidades técnicas tradicionales.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+                            <li style="margin-bottom: 0.5rem;">✅ +500 empresas atendidas</li>
+                            <li style="margin-bottom: 0.5rem;">✅ 95% de satisfacción del cliente</li>
+                            <li style="margin-bottom: 0.5rem;">✅ Soporte técnico 24/7</li>
+                            <li style="margin-bottom: 0.5rem;">✅ Implementación en menos de 48hrs</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='400' viewBox='0 0 500 400'%3E%3Cdefs%3E%3ClinearGradient id='aboutBg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23f8f9fa'/%3E%3Cstop offset='100%25' style='stop-color:%23e9ecef'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='400' fill='url(%23aboutBg)'/%3E%3Cg transform='translate(100,80)'%3E%3Ccircle cx='150' cy='80' r='40' fill='%23B14FFF' opacity='0.8'/%3E%3Ccircle cx='80' cy='160' r='35' fill='%232781DF' opacity='0.8'/%3E%3Ccircle cx='220' cy='160' r='35' fill='%23542AAD' opacity='0.8'/%3E%3Cpath d='M150,120 L80,160 M150,120 L220,160' stroke='%23333' stroke-width='3' opacity='0.6'/%3E%3C/g%3E%3Ctext x='250' y='350' text-anchor='middle' fill='%23666' font-size='16'%3ENuestro Equipo%3C/text%3E%3C/svg%3E" alt="Nuestro equipo - Especialistas en tecnología NFC" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- News Section -->
+        <section class="news" id="noticias" aria-labelledby="news-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="news-title" class="section-title">Últimas Noticias</h2>
+                    <p class="section-subtitle">Mantente al día con las últimas tendencias en tecnología NFC y automatización empresarial.</p>
+                </div>
+                
+                <div class="news-grid">
+                    <article class="news-card lazy-load">
+                        <div class="news-image" aria-hidden="true"></div>
+                        <div class="news-content">
+                            <time class="news-date" datetime="2025-07-25">25 Jul 2025</time>
+                            <h3>El Futuro del Comercio Digital está en NFC</h3>
+                            <p>Descubre cómo la tecnología NFC está revolucionando la forma en que las PyMEs interactúan con sus clientes y optimizan sus procesos comerciales.</p>
+                            <a href="#" class="read-more" aria-label="Leer artículo completo: El Futuro del Comercio Digital">Leer más →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card lazy-load">
+                        <div class="news-image" aria-hidden="true"></div>
+                        <div class="news-content">
+                            <time class="news-date" datetime="2025-07-20">20 Jul 2025</time>
+                            <h3>5 Formas de Automatizar tu Negocio en 2025</h3>
+                            <p>Estrategias prácticas para implementar automatización en pequeñas y medianas empresas, reducir costos y aumentar la eficiencia operativa.</p>
+                            <a href="#" class="read-more" aria-label="Leer artículo completo: 5 Formas de Automatizar">Leer más →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card lazy-load">
+                        <div class="news-image" aria-hidden="true"></div>
+                        <div class="news-content">
+                            <time class="news-date" datetime="2025-07-15">15 Jul 2025</time>
+                            <h3>Casos de Éxito: Restaurantes y NFC</h3>
+                            <p>Conoce cómo restaurantes locales han incrementado sus ventas un 40% implementando menús digitales y sistemas de pago NFC.</p>
+                            <a href="#" class="read-more" aria-label="Leer artículo completo: Casos de Éxito Restaurantes">Leer más →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta" id="contacto" aria-labelledby="cta-title">
+            <div class="container">
+                <h2 id="cta-title">¿Listo para Transformar tu Negocio?</h2>
+                <p>Únete a cientos de empresarios que ya están automatizando sus procesos y aumentando sus ventas con AiLink.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#demo" class="btn btn-primary" style="background: white; color: var(--color-primary);">Solicitar Demo Gratuito</a>
+                    <a href="tel:+573001234567" class="btn btn-secondary" style="border-color: white; color: white;">Llamar Ahora</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AiLink</h3>
+                    <p>Automatización digital inteligente para empresarios visionarios. Conectamos tu negocio con el futuro.</p>
+                    <div style="margin-top: 1rem;">
+                        <p><strong>📍</strong> Duitama, Boyacá, Colombia</p>
+                        <p><strong>📞</strong> +57 300 123 4567</p>
+                        <p><strong>✉️</strong> serviciocliente@ailink.com.co</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Productos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#producto">Dispositivos NFC</a></li>
+                        <li><a href="#caracteristicas">Automatización BPM</a></li>
+                        <li><a href="#caracteristicas">Gestión Redes Sociales</a></li>
+                        <li><a href="#caracteristicas">Sistema de Fidelización</a></li>
+                        <li><a href="#caracteristicas">Analytics Avanzados</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <ul class="footer-links">
+                        <li><a href="#nosotros">Quiénes Somos</a></li>
+                        <li><a href="#noticias">Blog & Noticias</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#soporte">Soporte Técnico</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#demo">Demo Gratuito</a></li>
+                        <li><a href="#documentacion">Documentación</a></li>
+                        <li><a href="#api">API para Desarrolladores</a></li>
+                        <li><a href="#casos">Casos de Uso</a></li>
+                        <li><a href="#precios">Planes & Precios</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AiLink. Todos los derechos reservados. | <a href="#privacidad" style="color: inherit;">Política de Privacidad</a> | <a href="#terminos" style="color: inherit;">Términos de Servicio</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Configuración global de variables
+        const CONFIG = {
+            siteName: 'AiLink',
+            companyPhone: '+573001234567',
+            companyEmail: 'hola@nfcconnect.co',
+            companyLocation: 'Duitama, Boyacá, Colombia',
+            apiEndpoint: '/api/v1',
+            carouselAutoplay: true,
+            carouselInterval: 5000,
+            lazyLoadOffset: 100
+        };
+        
+        // Utilidades generales
+        const Utils = {
+            // Debounce function para optimizar eventos
+            debounce: (func, wait) => {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            },
+            
+            // Throttle function para scroll events
+            throttle: (func, limit) => {
+                let inThrottle;
+                return function() {
+                    const args = arguments;
+                    const context = this;
+                    if (!inThrottle) {
+                        func.apply(context, args);
+                        inThrottle = true;
+                        setTimeout(() => inThrottle = false, limit);
+                    }
+                }
+            },
+            
+            // Animación suave al hacer scroll
+            smoothScroll: (target) => {
+                const element = document.querySelector(target);
+                if (element) {
+                    const headerOffset = 80;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        };
+        
+        // Navegación y Header
+        class Navigation {
+            constructor() {
+                this.header = document.getElementById('header');
+                this.hamburger = document.getElementById('hamburger');
+                this.navMenu = document.getElementById('nav-menu');
+                this.navLinks = document.querySelectorAll('.nav-link');
+                
+                this.init();
+            }
+            
+            init() {
+                this.handleScroll();
+                this.handleMobileMenu();
+                this.handleNavLinks();
+                
+                // Event listeners
+                window.addEventListener('scroll', Utils.throttle(() => this.handleScroll(), 10));
+                this.hamburger.addEventListener('click', () => this.toggleMobileMenu());
+                
+                // Cerrar menú móvil al hacer click fuera
+                document.addEventListener('click', (e) => {
+                    if (!this.navMenu.contains(e.target) && !this.hamburger.contains(e.target)) {
+                        this.closeMobileMenu();
+                    }
+                });
+            }
+            
+            handleScroll() {
+                const scrolled = window.scrollY > 50;
+                this.header.classList.toggle('scrolled', scrolled);
+            }
+            
+            handleMobileMenu() {
+                // Cerrar menú al cambiar el tamaño de pantalla
+                window.addEventListener('resize', Utils.debounce(() => {
+                    if (window.innerWidth > 768) {
+                        this.closeMobileMenu();
+                    }
+                }, 250));
+            }
+            
+            handleNavLinks() {
+                this.navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = link.getAttribute('href');
+                        if (target.startsWith('#')) {
+                            Utils.smoothScroll(target);
+                            this.closeMobileMenu();
+                        }
+                    });
+                });
+            }
+            
+            toggleMobileMenu() {
+                const isActive = this.navMenu.classList.contains('active');
+                if (isActive) {
+                    this.closeMobileMenu();
+                } else {
+                    this.openMobileMenu();
+                }
+            }
+            
+            openMobileMenu() {
+                this.navMenu.classList.add('active');
+                this.hamburger.classList.add('active');
+                this.hamburger.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            closeMobileMenu() {
+                this.navMenu.classList.remove('active');
+                this.hamburger.classList.remove('active');
+                this.hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        }
+        
+        // Carrusel de productos
+        class ProductCarousel {
+            constructor() {
+                this.carousel = document.getElementById('carousel');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.dots = document.querySelectorAll('.carousel-dot');
+                this.currentSlide = 0;
+                this.totalSlides = this.dots.length;
+                this.autoplayInterval = null;
+                
+                this.init();
+            }
+            
+            init() {
+                // Event listeners
+                this.prevBtn.addEventListener('click', () => this.previousSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+                
+                // Touch/swipe support para móviles
+                this.addTouchSupport();
+                
+                // Autoplay
+                if (CONFIG.carouselAutoplay) {
+                    this.startAutoplay();
+                    
+                    // Pausar autoplay al hover
+                    this.carousel.parentElement.addEventListener('mouseenter', () => this.stopAutoplay());
+                    this.carousel.parentElement.addEventListener('mouseleave', () => this.startAutoplay());
+                }
+                
+                // Keyboard navigation
+                this.carousel.parentElement.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.previousSlide();
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                });
+            }
+            
+            addTouchSupport() {
+                let startX = 0;
+                let moveX = 0;
+                
+                this.carousel.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    this.stopAutoplay();
+                });
+                
+                this.carousel.addEventListener('touchmove', (e) => {
+                    moveX = e.touches[0].clientX;
+                });
+                
+                this.carousel.addEventListener('touchend', () => {
+                    const diffX = startX - moveX;
+                    const threshold = 50;
+                    
+                    if (Math.abs(diffX) > threshold) {
+                        if (diffX > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.previousSlide();
+                        }
+                    }
+                    
+                    if (CONFIG.carouselAutoplay) {
+                        this.startAutoplay();
+                    }
+                });
+            }
+            
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateCarousel();
+                this.updateDots();
+            }
+            
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateCarousel();
+                this.updateDots();
+            }
+            
+            previousSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateCarousel();
+                this.updateDots();
+            }
+            
+            updateCarousel() {
+                const translateX = -this.currentSlide * 100;
+                this.carousel.style.transform = `translateX(${translateX}%)`;
+            }
+            
+            updateDots() {
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                    dot.setAttribute('aria-selected', index === this.currentSlide);
+                });
+            }
+            
+            startAutoplay() {
+                this.autoplayInterval = setInterval(() => {
+                    this.nextSlide();
+                }, CONFIG.carouselInterval);
+            }
+            
+            stopAutoplay() {
+                if (this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                    this.autoplayInterval = null;
+                }
+            }
+        }
+        
+        // Lazy Loading para imágenes y animaciones
+        class LazyLoader {
+            constructor() {
+                this.elements = document.querySelectorAll('.lazy-load');
+                this.imageElements = document.querySelectorAll('img[loading="lazy"]');
+                
+                this.init();
+            }
+            
+            init() {
+                // Intersection Observer para animaciones
+                const animationObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('loaded');
+                            animationObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: `${CONFIG.lazyLoadOffset}px`
+                });
+                
+                this.elements.forEach(el => {
+                    animationObserver.observe(el);
+                });
+                
+                // Intersection Observer para imágenes (fallback para navegadores sin soporte nativo)
+                if ('IntersectionObserver' in window) {
+                    const imageObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                if (img.dataset.src) {
+                                    img.src = img.dataset.src;
+                                    img.removeAttribute('data-src');
+                                }
+                                imageObserver.unobserve(img);
+                            }
+                        });
+                    });
+                    
+                    this.imageElements.forEach(img => {
+                        if (img.dataset.src) {
