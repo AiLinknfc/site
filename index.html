@@ -119,12 +119,6 @@
             position: absolute;
             top: -40px;
             left: 6px;
-            background: var(--color-primary);
-            color: var(--color-white);
-            padding: 8px;
-            text-decoration: none;
-            z-index: 10000;
-            border-radius: var(--border-radius-sm);
         }
         
         .skip-link:focus {
@@ -916,54 +910,54 @@
             </div>
         </section>
         
-        <!-- Features Section -->
-        <section class="features" id="caracteristicas" aria-labelledby="features-title">
+
+        <section class="features" id="caracteristicas">
             <div class="container">
-                <div class="section-header">
-                    <h2 id="features-title" class="section-title">¿Por qué elegir AiLink?</h2>
-                    <p class="section-subtitle">Ofrecemos soluciones completas de automatización digital diseñadas específicamente para empresarios y emprendedores que buscan innovar.</p>
-                </div>
                 
+                <div class="container" data-aos="fade-up">
+                    <div class="row gx-0">
+            
+                      <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="content">
+                          <h3>¿Cómo Te Ayudamos?</h3>
+                          <h2>Nuestra plataforma ofrece servicios efectivos de personalización y mercadeo, está solución permite integrar soluciones de automatización y analitica a pequeñas, medianas y grandes empresas</h2>
+                          <p>
+                            Estos son nuestros servicios más solicitados.
+                          </p>
+                        </div>
+                      </div>            
+                    </div>
+                </div>
+                  
                 <div class="features-grid">
-                    <article class="feature-card lazy-load">
-                        <div class="feature-icon" aria-hidden="true">🚀</div>
-                        <h3>Automatización de Procesos</h3>
-                        <p>Optimiza workflows empresariales, reduce tiempos operativos y mejora la eficiencia con nuestro sistema BPM integrado.</p>
-                    </article>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <h3>Marketing</h3>
+                        </div>
+                        <img src="marketing.jpg" alt="foto de gatito" width="280" height="200" />
+                        <p>Publica la información de tu mascota perdida en segundos. Incluye fotos, descripción detallada y última ubicación conocida para maximizar las posibilidades de encontrarla.</p>
+                    </div>
                     
-                    <article class="feature-card lazy-load">
-                        <div class="feature-icon" aria-hidden="true">📱</div>
-                        <h3>Gestión de Redes Sociales</h3>
-                        <p>Automatiza publicaciones, programa contenido y gestiona múltiples plataformas desde un solo panel de control.</p>
-                    </article>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                        <h3>Automatización</h3>
+                    </div>
+                        <img src="automatización.jpg" alt="foto de gatito" width="280" height="200" />
+                        <p>Sistema de mapas interactivo que muestra mascotas perdidas y encontradas en tu zona. Recibe alertas cuando se reporte una mascota cerca de tu ubicación.</p>
+                    </div>
                     
-                    <article class="feature-card lazy-load">
-                        <div class="feature-icon" aria-hidden="true">💳</div>
-                        <h3>Fidelización de Clientes</h3>
-                        <p>Implementa programas de lealtad, cupones digitales y sistemas de recompensas utilizando tecnología NFC.</p>
-                    </article>
-                    
-                    <article class="feature-card lazy-load">
-                        <div class="feature-icon" aria-hidden="true">🌐</div>
-                        <h3>Presencia Digital Instantánea</h3>
-                        <p>Crea tu bio digital, conecta con sistemas de pago y establece tu presencia online sin necesidad de programar.</p>
-                    </article>
-                    
-                    <article class="feature-card lazy-load">
-                        <div class="feature-icon" aria-hidden="true">📊</div>
-                        <h3>Analytics Avanzados</h3>
-                        <p>Obtén insights detallados sobre el comportamiento de clientes, conversiones y ROI de tus campañas digitales.</p>
-                    </article>
-                    
-                    <article class="feature-card lazy-load">
-                        <div class="feature-icon" aria-hidden="true">🔒</div>
-                        <h3>Seguridad Empresarial</h3>
-                        <p>Protección de datos de grado bancario, cumplimiento GDPR y cifrado end-to-end para toda tu información.</p>
-                    </article>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                        <h3>Analítica</h3>
+                        </div>
+                        <img src="analitica.png" alt="foto de gatito" width="280" height="200" />
+                        <p>Miles de voluntarios, veterinarios y amantes de los animales colaboran activamente. Una red humana comprometida con reunir familias.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
-        
+
         <!-- Product Carousel Section -->
         <section class="product-section" id="producto" aria-labelledby="product-title">
             <div class="container">
@@ -975,12 +969,14 @@
                 <div class="carousel-container">
                     <div class="carousel" id="carousel" role="region" aria-label="Galería de productos NFC">
                         <div class="carousel-slide">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23B14FFF'/%3E%3Cstop offset='100%25' style='stop-color:%232781DF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23bg)'/%3E%3Ccircle cx='400' cy='200' r='80' fill='rgba(255,255,255,0.2)' stroke='white' stroke-width='3'/%3E%3Ctext x='400' y='210' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3ENFC%3C/text%3E%3Ctext x='400' y='320' text-anchor='middle' fill='white' font-size='18'%3EDispositivo Principal%3C/text%3E%3C/svg%3E" alt="Dispositivo NFC principal - Conectividad avanzada" loading="lazy">
+                            <img src="ailink_keychain_vector.svg" alt="foto de gatito" width="80" height="50" loading="lazy" />
                             <div class="carousel-content">
                                 <h3>Dispositivo NFC Principal</h3>
                                 <p>Nuestro dispositivo flagship con conectividad avanzada, batería de larga duración y compatibilidad universal.</p>
                             </div>
                         </div>
+                        
+                        
                         
                         <div class="carousel-slide">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cdefs%3E%3ClinearGradient id='bg2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232781DF'/%3E%3Cstop offset='100%25' style='stop-color:%23542AAD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23bg2)'/%3E%3Crect x='300' y='150' width='200' height='100' rx='15' fill='rgba(255,255,255,0.2)' stroke='white' stroke-width='3'/%3E%3Ctext x='400' y='210' text-anchor='middle' fill='white' font-size='20' font-family='Arial'%3ENFC Card%3C/text%3E%3Ctext x='400' y='320' text-anchor='middle' fill='white' font-size='18'%3ETarjeta Inteligente%3C/text%3E%3C/svg%3E" alt="Tarjeta NFC inteligente - Formato compacto" loading="lazy">
@@ -1034,7 +1030,7 @@
             </div>
         </section>
         
-        <!-- News Section -->
+        <!-- News Section 
         <section class="news" id="noticias" aria-labelledby="news-title">
             <div class="container">
                 <div class="section-header">
@@ -1074,7 +1070,7 @@
                     </article>
                 </div>
             </div>
-        </section>
+        </section> -->
         
         <!-- CTA Section -->
         <section class="cta" id="contacto" aria-labelledby="cta-title">
@@ -1083,7 +1079,7 @@
                 <p>Únete a cientos de empresarios que ya están automatizando sus procesos y aumentando sus ventas con AiLink.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="#demo" class="btn btn-primary" style="background: white; color: var(--color-primary);">Solicitar Demo Gratuito</a>
-                    <a href="tel:+573001234567" class="btn btn-secondary" style="border-color: white; color: white;">Llamar Ahora</a>
+                    <a href="https://wa.me/573124033960" class="btn btn-secondary" style="border-color: white; color: var(--color-tertiary);">Llamar Ahora</a>
                 </div>
             </div>
         </section>
@@ -1097,9 +1093,9 @@
                     <h3>AiLink</h3>
                     <p>Automatización digital inteligente para empresarios visionarios. Conectamos tu negocio con el futuro.</p>
                     <div style="margin-top: 1rem;">
-                        <p><strong>📍</strong> Duitama, Boyacá, Colombia</p>
-                        <p><strong>📞</strong> +57 300 123 4567</p>
-                        <p><strong>✉️</strong> serviciocliente@ailink.com.co</p>
+                        <p><strong>📍</strong> Boyacá, Colombia</p>
+                        <p><strong>📞</strong> +57 316 497 6104</p>
+                        <p><strong>✉️</strong> soporte@ailink.com.co</p>
                     </div>
                 </div>
                 
@@ -1136,6 +1132,9 @@
                     </ul>
                 </div>
             </div>
+
+            <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
+            <script src="https://files.bpcontent.cloud/2025/08/26/14/20250826144307-8973543Q.js" defer></script>
             
             <div class="footer-bottom">
                 <p>&copy; 2025 AiLink. Todos los derechos reservados. | <a href="#privacidad" style="color: inherit;">Política de Privacidad</a> | <a href="#terminos" style="color: inherit;">Términos de Servicio</a></p>
@@ -1147,8 +1146,8 @@
         // Configuración global de variables
         const CONFIG = {
             siteName: 'AiLink',
-            companyPhone: '+573001234567',
-            companyEmail: 'hola@nfcconnect.co',
+            companyPhone: '+573124033960',
+            companyEmail: 'soporte@ailink.com.co',
             companyLocation: 'Duitama, Boyacá, Colombia',
             apiEndpoint: '/api/v1',
             carouselAutoplay: true,
@@ -1441,3 +1440,8 @@
                     
                     this.imageElements.forEach(img => {
                         if (img.dataset.src) {
+
+                    }
+                }
+            }
+        }
