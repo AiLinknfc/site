@@ -143,6 +143,11 @@
             margin-bottom: var(--spacing-md);
             color: var(--color-gray-medium);
         }
+		
+		p1 {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-white);
+        }
         
         /* Buttons */
         .btn {
@@ -204,6 +209,17 @@
             margin: 0 auto;
             padding: 0 var(--spacing-md);
         }
+		
+		/* Container-dual */
+        .container-dual {
+            display: grid;
+			grid-template-columns: 2.2fr 1fr;
+			gap: 20px;
+			align-items: up;
+			max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
         
         /* Header */
         .header {
@@ -244,7 +260,7 @@
 
           width: 50px;
           height: 50px; 
-          background-image: url('Logo redes.jpg');
+          background-image: url('Logo redes.svg');
           background-size: contain; 
           background-repeat: no-repeat; 
           background-position: center; 
@@ -448,9 +464,6 @@
         }
         
         .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
             border-radius: var(--border-radius-lg);
             display: flex;
             align-items: center;
@@ -634,6 +647,11 @@
         .news-content {
             padding: var(--spacing-lg);
         }
+		
+		 .news-content-colorful {
+            padding: var(--spacing-lg);
+			background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+        }
         
         .news-date {
             color: var(--color-primary);
@@ -647,9 +665,21 @@
             margin-bottom: var(--spacing-sm);
             font-size: var(--font-size-lg);
         }
+		
+		.news-card h4 {
+            color: var(--color-white);
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--font-size-lg);
+        }
         
         .news-card p {
             color: var(--color-gray-medium);
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--spacing-md);
+        }
+		
+		.news-card p1 {
+            color: var(--color-white);
             font-size: var(--font-size-sm);
             margin-bottom: var(--spacing-md);
         }
@@ -733,6 +763,11 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.6);
         }
+		
+		.social-links img {
+			width: 25px; /* tamaño más pequeño */
+			height: 25px;
+		}
         
         /* Form Styles */
         .form-group {
@@ -827,6 +862,20 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+			
+			.stats {
+				padding: 80px 0;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				text-align: center;
+			}
+			
+	        .stat-item h3 {
+				font-size: 3rem;
+				margin-bottom: 10px;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			}
+			
         }
         
         @media (max-width: 480px) {
@@ -882,6 +931,7 @@
                 <li><a href="#producto" class="nav-link">Producto</a></li>
                 <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
                 <li><a href="#noticias" class="nav-link">Noticias</a></li>
+				<li><a href="#servicios" class="nav-link">Servicios</a></li>
                 <li><a href="#contacto" class="btn btn-primary">Contacto</a></li>
             </ul>
             
@@ -919,10 +969,10 @@
             
                       <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                         <div class="content">
-                          <h3>¿Cómo Te Ayudamos?</h3>
-                          <h2>Nuestra plataforma ofrece servicios efectivos de personalización y mercadeo, está solución permite integrar soluciones de automatización y analitica a pequeñas, medianas y grandes empresas</h2>
+                          <h3>¿Cómo te ayudamos?</h3>
+                          <p><strong>Nuestra plataforma ofrece servicios efectivos de personalización y trasformación digital a las necesidades de cada empresa, estás soluciónes permiten integrar facilmente necesidades de automatización, optimización de procesos y analítica a pequeñas, medianas y grandes empresas</strong></p>
                           <p>
-                            Estos son nuestros servicios más solicitados.
+                            Estos son nuestros principales productos.
                           </p>
                         </div>
                       </div>            
@@ -934,24 +984,35 @@
                         <div class="feature-icon">
                             <h3>Marketing</h3>
                         </div>
-                        <img src="marketing.jpg" alt="foto de gatito" width="280" height="200" />
-                        <p>Publica la información de tu mascota perdida en segundos. Incluye fotos, descripción detallada y última ubicación conocida para maximizar las posibilidades de encontrarla.</p>
+                        <img src="marketing.jpeg" alt="foto de gatito" width="280" height="200" />
+                        <p>
+							Publicidad contextual inteligente, segmentada con datos en tiempo real y orientada a conversiones. 
+							Con AiLink, tu negocio puede enviar promociones, contenidos dinámicos y mensajes personalizados cuando un cliente escanea tu tarjeta NFC.
+							Transformamos cada interacción en una oportunidad de fidelización y captación de leads para PyMEs enfocadas en crecimiento digital.
+						</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-icon">
                         <h3>Automatización</h3>
                     </div>
-                        <img src="automatización.jpg" alt="foto de gatito" width="280" height="200" />
-                        <p>Sistema de mapas interactivo que muestra mascotas perdidas y encontradas en tu zona. Recibe alertas cuando se reporte una mascota cerca de tu ubicación.</p>
+                        <img src="automatización.jpeg" alt="foto de gatito" width="280" height="200" />
+                        <p>
+							Simplifica y acelera tus operaciones mediante flujos automatizados: generación de clientes potenciales, envío automático de notificaciones, integraciones con CRM y control de tareas repetitivas.
+							Orquestamos actividades digitales sin intervención manual, permitiéndote centrarte en decisiones estratégicas mientras el sistema ejecuta lo demás.
+						</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-icon">
                         <h3>Analítica</h3>
                         </div>
-                        <img src="analitica.png" alt="foto de gatito" width="280" height="200" />
-                        <p>Miles de voluntarios, veterinarios y amantes de los animales colaboran activamente. Una red humana comprometida con reunir familias.</p>
+                        <img src="analitica.jpeg" alt="foto de gatito" width="280" height="200" />
+                        <p>
+							Transforma datos en decisiones con paneles inteligentes de métricas en tiempo real.
+							Monitorea escaneos, conversiones, rutas geográficas y comportamiento del cliente.
+							Con AiLink, conviertes el uso del NFC en insights accionables, enfocando tus esfuerzos hacia lo que realmente mueve resultados.
+						</p>
                     </div>
 
                 </div>
@@ -963,34 +1024,30 @@
             <div class="container">
                 <div class="section-header">
                     <h2 id="product-title" class="section-title">Nuestro Dispositivo NFC</h2>
-                    <p class="section-subtitle">Descubre cómo nuestro innovador dispositivo NFC revoluciona la forma en que conectas con tus clientes.</p>
+                    <p class="section-subtitle">Descubre cómo nuestra tecnologia colombiana revoluciona la forma en que conectas con tus clientes y potencias tus resuldatos y creces en redes sociales.</p>
                 </div>
                 
                 <div class="carousel-container">
                     <div class="carousel" id="carousel" role="region" aria-label="Galería de productos NFC">
-                        <div class="carousel-slide">
-                            <img src="ailink_keychain_vector.svg" alt="foto de gatito" width="80" height="50" loading="lazy" />
+					    <div class="carousel-slide">
+                            <img src="Keychain.jpeg" alt="foto de gatito" width="80" height="50" loading="lazy" />
                             <div class="carousel-content">
-                                <h3>Dispositivo NFC Principal</h3>
-                                <p>Nuestro dispositivo flagship con conectividad avanzada, batería de larga duración y compatibilidad universal.</p>
+                                <h3>Brazalete NFC Inteligente</h3>
+                                <p1>Diseñado para el uso diario, combina comodidad, estilo y conectividad continua, resistente al agua y al desgaste, ideal para profesionales y emprendedores activos</p1>
                             </div>
                         </div>
-                        
-                        
-                        
                         <div class="carousel-slide">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cdefs%3E%3ClinearGradient id='bg2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232781DF'/%3E%3Cstop offset='100%25' style='stop-color:%23542AAD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23bg2)'/%3E%3Crect x='300' y='150' width='200' height='100' rx='15' fill='rgba(255,255,255,0.2)' stroke='white' stroke-width='3'/%3E%3Ctext x='400' y='210' text-anchor='middle' fill='white' font-size='20' font-family='Arial'%3ENFC Card%3C/text%3E%3Ctext x='400' y='320' text-anchor='middle' fill='white' font-size='18'%3ETarjeta Inteligente%3C/text%3E%3C/svg%3E" alt="Tarjeta NFC inteligente - Formato compacto" loading="lazy">
+                            <img src="ailink_keychain_vector.jpeg" alt="foto de gatito" width="80" height="50" loading="lazy" />
                             <div class="carousel-content">
-                                <h3>Tarjeta NFC Inteligente</h3>
-                                <p>Formato compacto ideal para networking, tarjetas de presentación digitales y acceso rápido a información.</p>
+                                <h3>Banda Laser Premium</h3>
+                                <p1>Una pieza exclusiva con diseño minimalista y acabado brillante tipo láser. Conecta estética, innovación y funcionalidad en un solo accesorio inteligente.</p1>
                             </div>
                         </div>
-                        
                         <div class="carousel-slide">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cdefs%3E%3ClinearGradient id='bg3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23542AAD'/%3E%3Cstop offset='100%25' style='stop-color:%23B14FFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23bg3)'/%3E%3Ccircle cx='400' cy='200' r='60' fill='rgba(255,255,255,0.2)' stroke='white' stroke-width='3'/%3E%3Ccircle cx='400' cy='200' r='30' fill='white' opacity='0.3'/%3E%3Ctext x='400' y='320' text-anchor='middle' fill='white' font-size='18'%3ETag NFC Premium%3C/text%3E%3C/svg%3E" alt="Tag NFC premium - Adhesivo inteligente" loading="lazy">
+                            <img src="BraceletNFC.jpeg" alt="foto de gatito" width="80" height="50" loading="lazy" />
                             <div class="carousel-content">
-                                <h3>Tag NFC Premium</h3>
-                                <p>Adhesivos inteligentes para productos, mesas, displays y puntos de interacción personalizados.</p>
+                                <h3>Brazalete NFC Principal</h3>
+                                <p1>Moderno y versátil con NFC programable para compartir tu identidad digital, portafolios o enlaces de redes sociales al instante, Ideal para entornos corporativos, ferias y eventos con alto flujo de usuarios.</p1>
                             </div>
                         </div>
                     </div>
@@ -1009,35 +1066,85 @@
         
         <!-- About Section -->
         <section class="about" id="nosotros" aria-labelledby="about-title">
-            <div class="container">
+            <div class="container-dual">
                 <div class="about-content">
                     <div class="about-text">
                         <h2 id="about-title">Quiénes Somos</h2>
-                        <p>Somos un equipo apasionado de innovadores tecnológicos dedicados a democratizar el acceso a herramientas digitales avanzadas para pequeñas y medianas empresas.</p>
-                        <p>Fundada por emprendedores que entienden los desafíos del mundo empresarial moderno, AiLink nació de la necesidad de brindar soluciones tecnológicas accesibles y efectivas.</p>
-                        <p>Nuestra misión es empoderar a cada empresario con las herramientas digitales necesarias para competir en el mercado actual, sin las complejidades técnicas tradicionales.</p>
-                        <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
-                            <li style="margin-bottom: 0.5rem;">✅ +500 empresas atendidas</li>
-                            <li style="margin-bottom: 0.5rem;">✅ 95% de satisfacción del cliente</li>
-                            <li style="margin-bottom: 0.5rem;">✅ Soporte técnico 24/7</li>
-                            <li style="margin-bottom: 0.5rem;">✅ Implementación en menos de 48hrs</li>
-                        </ul>
-                    </div>
-                    <div class="about-image">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='400' viewBox='0 0 500 400'%3E%3Cdefs%3E%3ClinearGradient id='aboutBg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23f8f9fa'/%3E%3Cstop offset='100%25' style='stop-color:%23e9ecef'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='400' fill='url(%23aboutBg)'/%3E%3Cg transform='translate(100,80)'%3E%3Ccircle cx='150' cy='80' r='40' fill='%23B14FFF' opacity='0.8'/%3E%3Ccircle cx='80' cy='160' r='35' fill='%232781DF' opacity='0.8'/%3E%3Ccircle cx='220' cy='160' r='35' fill='%23542AAD' opacity='0.8'/%3E%3Cpath d='M150,120 L80,160 M150,120 L220,160' stroke='%23333' stroke-width='3' opacity='0.6'/%3E%3C/g%3E%3Ctext x='250' y='350' text-anchor='middle' fill='%23666' font-size='16'%3ENuestro Equipo%3C/text%3E%3C/svg%3E" alt="Nuestro equipo - Especialistas en tecnología NFC" loading="lazy">
+                        <p>
+						En AiLink impulsamos la transformación digital de las empresas mediante tecnología NFC y soluciones inteligentes. Nuestro propósito es conectar personas, marcas y datos de forma ágil. Creamos herramientas accesibles que automatizan procesos, optimizan operaciones y fortalecen la relación con los clientes.</p>
+                        <p>Somos un equipo con una visión humana y tenologica centrada en la experiencia del usuario. Trabajamos junto a emprendedores y empresas que buscan crecer en un ecosistema digital colaborativo.</p>
                     </div>
                 </div>
+				<div class="stats">
+					<div class="stats-grid">
+						<ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+                            <li style="margin-bottom: 0.5rem;"> Unete a nuestro equipo</li>
+                            <p> </p>
+                        </ul>
+						<div class="stat-item">
+							<h3>87</h3>
+							<p>Empresas atendidas</p>
+						</div>
+						<div class="stat-item">
+							<h3>354</h3>
+							<p>Usuarios Activos</p>
+						</div>
+						<div class="stat-item">
+							<h3>1165</h3>
+							<p>Dispositivos en linea</p>
+						</div>
+						<div class="stat-item">
+							<h3>24/7</h3>
+							<p>Soporte técnico</p>
+						</div>
+					</div>	
+				</div>	
             </div>
         </section>
-        
-        <!-- News Section 
+
+		<!-- Servicios  -->		
+        <section class="news" id="servicios" aria-labelledby="news-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="news-title" class="section-title">Nuestros Servicios</h2>
+                    <p class="section-subtitle">Orquestamos ecosistemas inteligentes donde el marketing personalizado, la automatización de procesos y la analítica avanzada conectan con cada interacción fisica o digital para transformar datos accionables que impulsan decisiones, optimizan estrategias y crean experiencias digitales únicas en tiempo real.</p>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card lazy-load">
+                        <div class="news-content-colorful">
+                            <h4>Servicio de Identidad Digital NFC</h4>
+                            <p1>Creamos experiencias interactivas con dispositivos NFC personalizados para tu marca. Comparte información, promociones o contactos con solo un toque en nuestra APP</p1>
+                            <a href="#" class="read-more" aria-label="Leer artículo completo: El Futuro del Comercio Digital">Leer más →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card lazy-load">
+                        <div class="news-content-colorful">
+                            <h4>Servicios de Agentes digitales y Automatización Inteligente</h4>
+                            <p1>Conecta tus flujos de trabajo con sistemas de respuesta automática, recordatorios, CRM y herramientas de marketing sin esfuerzo manual.</p1>
+                            <a href="#" class="read-more" aria-label="Leer artículo completo: 5 Formas de Automatizar">Leer más →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card lazy-load">
+                        <div class="news-content-colorful">
+                            <h4>Servicio de Analítica en Tiempo Real</h4>
+                            <p1>Mide el rendimiento de tus campañas con tus dispositivos NFC y paneles visuales. Convierte cada interacción en datos útiles para mejorar tu estrategia.</p1>
+                            <a href="#" class="read-more" aria-label="Leer artículo completo: Casos de Éxito Restaurantes">Leer más →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>		
+		
+		<!-- Notice  		
         <section class="news" id="noticias" aria-labelledby="news-title">
             <div class="container">
                 <div class="section-header">
-                    <h2 id="news-title" class="section-title">Últimas Noticias</h2>
-                    <p class="section-subtitle">Mantente al día con las últimas tendencias en tecnología NFC y automatización empresarial.</p>
+                    <h2 id="news-title" class="section-title">Noticias</h2>
+                    <p class="section-subtitle">
+					Mantente al día con las últimas innovaciones en tecnología NFC, automatización y marketing inteligente. En esta sección compartimos noticias, casos de éxito y tendencias que inspiran a las empresas a evolucionar hacia un futuro más conectado y digital.</p>
                 </div>
-                
                 <div class="news-grid">
                     <article class="news-card lazy-load">
                         <div class="news-image" aria-hidden="true"></div>
@@ -1045,7 +1152,7 @@
                             <time class="news-date" datetime="2025-07-25">25 Jul 2025</time>
                             <h3>El Futuro del Comercio Digital está en NFC</h3>
                             <p>Descubre cómo la tecnología NFC está revolucionando la forma en que las PyMEs interactúan con sus clientes y optimizan sus procesos comerciales.</p>
-                            <a href="#" class="read-more" aria-label="Leer artículo completo: El Futuro del Comercio Digital">Leer más →</a>
+                            <a href="https://ailinknfc.github.io/ServiciosAilink/" class="read-more" aria-label="Leer artículo completo: El Futuro del Comercio Digital">Leer más →</a>
                         </div>
                     </article>
                     
@@ -1093,9 +1200,20 @@
                     <h3>AiLink</h3>
                     <p>Automatización digital inteligente para empresarios visionarios. Conectamos tu negocio con el futuro.</p>
                     <div style="margin-top: 1rem;">
-                        <p><strong>📍</strong> Boyacá, Colombia</p>
-                        <p><strong>📞</strong> +57 316 497 6104</p>
-                        <p><strong>✉️</strong> soporte@ailink.com.co</p>
+						<div class="social-links">
+							<p><strong>📍</strong> Boyacá, Colombia</p>
+							<p><img href="https://wa.me/573124033960" src="whatsapp.svg" alt="WhatsApp" loading="lazy" style="width:18px; height:18px; vertical-align:middle; margin-right:6px;">+57 316 497 6104</p>
+							<p><strong>✉️</strong> soporte@ailink.com.co</p>
+							
+							<a href="https://www.facebook.com/ailinkcol" target="_blank" aria-label="Facebook AiLink"> <img src="facebook.svg" alt="Facebook" loading="lazy" /></a> 
+							<a href="https://www.instagram.com/ailinkcol" target="_blank" aria-label="Instagram AiLink"> <img src="instagram.svg" alt="Instagram" loading="lazy" /></a> 
+							<a href="https://www.linkedin.com/company/ailinkcol" target="_blank" aria-label="LinkedIn AiLink"> <img src="pinterest.svg" alt="LinkedIn" loading="lazy" /></a>
+							<a href="https://www.linkedin.com/company/ailinkcol" target="_blank" aria-label="LinkedIn AiLink"> <img src="linkedin.svg" alt="LinkedIn" loading="lazy" /></a>
+							<a href="https://www.linkedin.com/company/ailinkcol" target="_blank" aria-label="LinkedIn AiLink"> <img src="youtube.svg" alt="LinkedIn" loading="lazy" /></a>
+							<a href="https://www.linkedin.com/company/ailinkcol" target="_blank" aria-label="LinkedIn AiLink"> <img src="telegram.svg" alt="LinkedIn" loading="lazy" /></a>
+							<a href="https://www.linkedin.com/company/ailinkcol" target="_blank" aria-label="LinkedIn AiLink"> <img src="tiktok.svg" alt="LinkedIn" loading="lazy" /></a>
+							
+						</div>	
                     </div>
                 </div>
                 
@@ -1114,8 +1232,9 @@
                     <h3>Empresa</h3>
                     <ul class="footer-links">
                         <li><a href="#nosotros">Quiénes Somos</a></li>
-                        <li><a href="#noticias">Blog & Noticias</a></li>
+                        <li><a href="#noticias">Noticias</a></li>
                         <li><a href="#contacto">Contacto</a></li>
+						<li><a href="#servicios">Servicios</a></li>						
                         <li><a href="#soporte">Soporte Técnico</a></li>
                         <li><a href="#partners">Partners</a></li>
                     </ul>
@@ -1141,307 +1260,455 @@
             </div>
         </div>
     </footer>
-    
-    <script>
-        // Configuración global de variables
-        const CONFIG = {
-            siteName: 'AiLink',
-            companyPhone: '+573124033960',
-            companyEmail: 'soporte@ailink.com.co',
-            companyLocation: 'Duitama, Boyacá, Colombia',
-            apiEndpoint: '/api/v1',
-            carouselAutoplay: true,
-            carouselInterval: 5000,
-            lazyLoadOffset: 100
-        };
-        
-        // Utilidades generales
-        const Utils = {
-            // Debounce function para optimizar eventos
-            debounce: (func, wait) => {
-                let timeout;
-                return function executedFunction(...args) {
-                    const later = () => {
-                        clearTimeout(timeout);
-                        func(...args);
-                    };
-                    clearTimeout(timeout);
-                    timeout = setTimeout(later, wait);
-                };
-            },
-            
-            // Throttle function para scroll events
-            throttle: (func, limit) => {
-                let inThrottle;
-                return function() {
-                    const args = arguments;
-                    const context = this;
-                    if (!inThrottle) {
-                        func.apply(context, args);
-                        inThrottle = true;
-                        setTimeout(() => inThrottle = false, limit);
-                    }
-                }
-            },
-            
-            // Animación suave al hacer scroll
-            smoothScroll: (target) => {
-                const element = document.querySelector(target);
-                if (element) {
-                    const headerOffset = 80;
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        };
-        
-        // Navegación y Header
-        class Navigation {
-            constructor() {
-                this.header = document.getElementById('header');
-                this.hamburger = document.getElementById('hamburger');
-                this.navMenu = document.getElementById('nav-menu');
-                this.navLinks = document.querySelectorAll('.nav-link');
-                
-                this.init();
-            }
-            
-            init() {
-                this.handleScroll();
-                this.handleMobileMenu();
-                this.handleNavLinks();
-                
-                // Event listeners
-                window.addEventListener('scroll', Utils.throttle(() => this.handleScroll(), 10));
-                this.hamburger.addEventListener('click', () => this.toggleMobileMenu());
-                
-                // Cerrar menú móvil al hacer click fuera
-                document.addEventListener('click', (e) => {
-                    if (!this.navMenu.contains(e.target) && !this.hamburger.contains(e.target)) {
-                        this.closeMobileMenu();
-                    }
-                });
-            }
-            
-            handleScroll() {
-                const scrolled = window.scrollY > 50;
-                this.header.classList.toggle('scrolled', scrolled);
-            }
-            
-            handleMobileMenu() {
-                // Cerrar menú al cambiar el tamaño de pantalla
-                window.addEventListener('resize', Utils.debounce(() => {
-                    if (window.innerWidth > 768) {
-                        this.closeMobileMenu();
-                    }
-                }, 250));
-            }
-            
-            handleNavLinks() {
-                this.navLinks.forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const target = link.getAttribute('href');
-                        if (target.startsWith('#')) {
-                            Utils.smoothScroll(target);
-                            this.closeMobileMenu();
-                        }
-                    });
-                });
-            }
-            
-            toggleMobileMenu() {
-                const isActive = this.navMenu.classList.contains('active');
-                if (isActive) {
-                    this.closeMobileMenu();
-                } else {
-                    this.openMobileMenu();
-                }
-            }
-            
-            openMobileMenu() {
-                this.navMenu.classList.add('active');
-                this.hamburger.classList.add('active');
-                this.hamburger.setAttribute('aria-expanded', 'true');
-                document.body.style.overflow = 'hidden';
-            }
-            
-            closeMobileMenu() {
-                this.navMenu.classList.remove('active');
-                this.hamburger.classList.remove('active');
-                this.hamburger.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            }
-        }
-        
-        // Carrusel de productos
-        class ProductCarousel {
-            constructor() {
-                this.carousel = document.getElementById('carousel');
-                this.prevBtn = document.getElementById('prevBtn');
-                this.nextBtn = document.getElementById('nextBtn');
-                this.dots = document.querySelectorAll('.carousel-dot');
-                this.currentSlide = 0;
-                this.totalSlides = this.dots.length;
-                this.autoplayInterval = null;
-                
-                this.init();
-            }
-            
-            init() {
-                // Event listeners
-                this.prevBtn.addEventListener('click', () => this.previousSlide());
-                this.nextBtn.addEventListener('click', () => this.nextSlide());
-                
-                this.dots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => this.goToSlide(index));
-                });
-                
-                // Touch/swipe support para móviles
-                this.addTouchSupport();
-                
-                // Autoplay
-                if (CONFIG.carouselAutoplay) {
-                    this.startAutoplay();
-                    
-                    // Pausar autoplay al hover
-                    this.carousel.parentElement.addEventListener('mouseenter', () => this.stopAutoplay());
-                    this.carousel.parentElement.addEventListener('mouseleave', () => this.startAutoplay());
-                }
-                
-                // Keyboard navigation
-                this.carousel.parentElement.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowLeft') this.previousSlide();
-                    if (e.key === 'ArrowRight') this.nextSlide();
-                });
-            }
-            
-            addTouchSupport() {
-                let startX = 0;
-                let moveX = 0;
-                
-                this.carousel.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                    this.stopAutoplay();
-                });
-                
-                this.carousel.addEventListener('touchmove', (e) => {
-                    moveX = e.touches[0].clientX;
-                });
-                
-                this.carousel.addEventListener('touchend', () => {
-                    const diffX = startX - moveX;
-                    const threshold = 50;
-                    
-                    if (Math.abs(diffX) > threshold) {
-                        if (diffX > 0) {
-                            this.nextSlide();
-                        } else {
-                            this.previousSlide();
-                        }
-                    }
-                    
-                    if (CONFIG.carouselAutoplay) {
-                        this.startAutoplay();
-                    }
-                });
-            }
-            
-            goToSlide(index) {
-                this.currentSlide = index;
-                this.updateCarousel();
-                this.updateDots();
-            }
-            
-            nextSlide() {
-                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
-                this.updateCarousel();
-                this.updateDots();
-            }
-            
-            previousSlide() {
-                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
-                this.updateCarousel();
-                this.updateDots();
-            }
-            
-            updateCarousel() {
-                const translateX = -this.currentSlide * 100;
-                this.carousel.style.transform = `translateX(${translateX}%)`;
-            }
-            
-            updateDots() {
-                this.dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === this.currentSlide);
-                    dot.setAttribute('aria-selected', index === this.currentSlide);
-                });
-            }
-            
-            startAutoplay() {
-                this.autoplayInterval = setInterval(() => {
-                    this.nextSlide();
-                }, CONFIG.carouselInterval);
-            }
-            
-            stopAutoplay() {
-                if (this.autoplayInterval) {
-                    clearInterval(this.autoplayInterval);
-                    this.autoplayInterval = null;
-                }
-            }
-        }
-        
-        // Lazy Loading para imágenes y animaciones
-        class LazyLoader {
-            constructor() {
-                this.elements = document.querySelectorAll('.lazy-load');
-                this.imageElements = document.querySelectorAll('img[loading="lazy"]');
-                
-                this.init();
-            }
-            
-            init() {
-                // Intersection Observer para animaciones
-                const animationObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('loaded');
-                            animationObserver.unobserve(entry.target);
-                        }
-                    });
-                }, {
-                    threshold: 0.1,
-                    rootMargin: `${CONFIG.lazyLoadOffset}px`
-                });
-                
-                this.elements.forEach(el => {
-                    animationObserver.observe(el);
-                });
-                
-                // Intersection Observer para imágenes (fallback para navegadores sin soporte nativo)
-                if ('IntersectionObserver' in window) {
-                    const imageObserver = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                const img = entry.target;
-                                if (img.dataset.src) {
-                                    img.src = img.dataset.src;
-                                    img.removeAttribute('data-src');
-                                }
-                                imageObserver.unobserve(img);
-                            }
-                        });
-                    });
-                    
-                    this.imageElements.forEach(img => {
-                        if (img.dataset.src) {
+	    
+<script>
+/* =========================
+   Config global & Utils
+   ========================= */
+const CONFIG = {
+  siteName: 'AiLink',
+  companyPhone: '+573124033960',
+  companyEmail: 'soporte@ailink.com.co',
+  companyLocation: 'Duitama, Boyacá, Colombia',
+  apiEndpoint: '/api/v1',
+  carouselAutoplay: true,
+  carouselInterval: 5000,
+  lazyLoadOffset: 100
+};
 
-                    }
-                }
-            }
+const Utils = {
+  debounce: (func, wait) => {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  },
+
+  throttle: (func, limit) => {
+    let inThrottle;
+    return function() {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    }
+  },
+
+  smoothScroll: (target, headerOffset = 80) => {
+    const element = document.querySelector(target);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  }
+};
+
+/* =========================
+   Navigation / Header class
+   ========================= */
+class Navigation {
+  constructor() {
+    this.header = document.getElementById('header');
+    this.hamburger = document.getElementById('hamburger');
+    this.navMenu = document.getElementById('nav-menu') || document.querySelector('.nav-menu');
+    this.navLinks = document.querySelectorAll('.nav-link');
+    this.init();
+  }
+
+  init() {
+    if (!this.header) return;
+    this.handleScroll();
+    this.handleMobileMenu();
+    this.handleNavLinks();
+
+    window.addEventListener('scroll', Utils.throttle(() => this.handleScroll(), 100));
+    if (this.hamburger) {
+      this.hamburger.addEventListener('click', () => this.toggleMobileMenu());
+    }
+
+    // Cerrar menú móvil al hacer click fuera (si existe navMenu)
+    document.addEventListener('click', (e) => {
+      if (!this.navMenu || !this.hamburger) return;
+      if (!this.navMenu.contains(e.target) && !this.hamburger.contains(e.target)) {
+        this.closeMobileMenu();
+      }
+    });
+  }
+
+  handleScroll() {
+    const scrolled = window.scrollY > 50;
+    this.header.classList.toggle('scrolled', scrolled);
+  }
+
+  handleMobileMenu() {
+    window.addEventListener('resize', Utils.debounce(() => {
+      if (window.innerWidth > 768) {
+        this.closeMobileMenu();
+      }
+    }, 250));
+  }
+
+  handleNavLinks() {
+    this.navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href') || '';
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          Utils.smoothScroll(href);
+          this.closeMobileMenu();
         }
+      });
+    });
+  }
+
+  toggleMobileMenu() {
+    if (!this.navMenu || !this.hamburger) return;
+    const isActive = this.navMenu.classList.contains('active');
+    if (isActive) this.closeMobileMenu(); else this.openMobileMenu();
+  }
+
+  openMobileMenu() {
+    if (!this.navMenu || !this.hamburger) return;
+    this.navMenu.classList.add('active');
+    this.hamburger.classList.add('active');
+    this.hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeMobileMenu() {
+    if (!this.navMenu || !this.hamburger) return;
+    this.navMenu.classList.remove('active');
+    this.hamburger.classList.remove('active');
+    this.hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+}
+
+/* =========================
+   ProductCarousel class
+   ========================= */
+class ProductCarousel {
+  constructor() {
+    this.carousel = document.getElementById('carousel');
+    this.prevBtn = document.getElementById('prevBtn');
+    this.nextBtn = document.getElementById('nextBtn');
+    this.dotsContainer = document.querySelector('.carousel-nav');
+    this.dots = document.querySelectorAll('.carousel-dot');
+    this.slides = this.carousel ? Array.from(this.carousel.querySelectorAll('.carousel-slide')) : [];
+    this.currentSlide = 0;
+    this.totalSlides = this.slides.length || 0;
+    this.autoplayInterval = null;
+    this.slideWidth = 0;
+    this.resizeObserver = null;
+
+    this.init();
+  }
+
+  init() {
+    if (!this.carousel || this.totalSlides === 0) {
+      // nothing to initialize
+      return;
+    }
+
+    // Ensure dots exist and match slides: create if missing
+    if (!this.dotsContainer) {
+      // try to find parent container and create a nav
+      const parent = this.carousel.parentElement;
+      if (parent) {
+        this.dotsContainer = document.createElement('div');
+        this.dotsContainer.className = 'carousel-nav';
+        parent.appendChild(this.dotsContainer);
+      }
+    }
+
+    if (this.dotsContainer && this.dots.length !== this.totalSlides) {
+      // clear existing and recreate
+      this.dotsContainer.innerHTML = '';
+      for (let i = 0; i < this.totalSlides; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        btn.type = 'button';
+        btn.setAttribute('data-slide', String(i));
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-label', `Ir a slide ${i+1}`);
+        btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+        this.dotsContainer.appendChild(btn);
+      }
+      this.dots = this.dotsContainer.querySelectorAll('.carousel-dot');
+    }
+
+    // attach listeners
+    if (this.prevBtn) this.prevBtn.addEventListener('click', () => this.previousSlide());
+    if (this.nextBtn) this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+    this.dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => this.goToSlide(index));
+    });
+
+    // touch support
+    this.addTouchSupport();
+
+    // responsive sizing
+    this.updateSlideWidth();
+    window.addEventListener('resize', Utils.debounce(() => this.updateSlideWidth(), 120));
+
+    // optional ResizeObserver for precise width
+    try {
+      if ('ResizeObserver' in window) {
+        this.resizeObserver = new ResizeObserver(() => this.updateSlideWidth());
+        this.resizeObserver.observe(this.carousel);
+      }
+    } catch (e) { /* ignore */ }
+
+    // autoplay
+    if (CONFIG.carouselAutoplay) {
+      this.startAutoplay();
+      // pause on hover/focus
+      const container = this.carousel.parentElement || this.carousel;
+      container.addEventListener('mouseenter', () => this.stopAutoplay());
+      container.addEventListener('mouseleave', () => this.startAutoplay());
+      container.addEventListener('focusin', () => this.stopAutoplay());
+      container.addEventListener('focusout', () => this.startAutoplay());
+    }
+
+    // keyboard navigation
+    const parentEl = this.carousel.parentElement || this.carousel;
+    parentEl.setAttribute('tabindex', parentEl.getAttribute('tabindex') || '0');
+    parentEl.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') this.previousSlide();
+      if (e.key === 'ArrowRight') this.nextSlide();
+    });
+
+    // initial render
+    this.updateCarousel();
+    this.updateDots();
+  }
+
+  updateSlideWidth() {
+    this.slideWidth = this.carousel.clientWidth || this.carousel.offsetWidth || 0;
+    // ensure slides are same width (optional)
+    this.slides.forEach(slide => {
+      slide.style.minWidth = `${this.slideWidth}px`;
+    });
+    // reposition after size change
+    this.updateCarousel();
+  }
+
+  addTouchSupport() {
+    let startX = 0;
+    let moveX = 0;
+    let isTouch = false;
+
+    this.carousel.addEventListener('touchstart', (e) => {
+      isTouch = true;
+      startX = e.touches[0].clientX;
+      this.stopAutoplay();
+    }, { passive: true });
+
+    this.carousel.addEventListener('touchmove', (e) => {
+      moveX = e.touches[0].clientX;
+    }, { passive: true });
+
+    this.carousel.addEventListener('touchend', () => {
+      if (!isTouch) return;
+      const diffX = startX - moveX;
+      const threshold = 50;
+      if (Math.abs(diffX) > threshold) {
+        if (diffX > 0) this.nextSlide();
+        else this.previousSlide();
+      }
+      if (CONFIG.carouselAutoplay) this.startAutoplay();
+      isTouch = false;
+      startX = moveX = 0;
+    });
+  }
+
+  goToSlide(index) {
+    if (index < 0 || index >= this.totalSlides) return;
+    this.currentSlide = index;
+    this.updateCarousel();
+    this.updateDots();
+  }
+
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+    this.updateCarousel();
+    this.updateDots();
+  }
+
+  previousSlide() {
+    this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+    this.updateCarousel();
+    this.updateDots();
+  }
+
+  updateCarousel() {
+    const translateX = -(this.currentSlide * this.slideWidth);
+    this.carousel.style.transition = 'transform 0.6s ease-in-out';
+    this.carousel.style.transform = `translateX(${translateX}px)`;
+    // set aria-hidden for slides for screen readers
+    this.slides.forEach((slide, i) => {
+      slide.setAttribute('aria-hidden', i === this.currentSlide ? 'false' : 'true');
+    });
+  }
+
+  updateDots() {
+    if (!this.dots || this.dots.length === 0) return;
+    this.dots.forEach((dot, index) => {
+      const isActive = index === this.currentSlide;
+      dot.classList.toggle('active', isActive);
+      dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      dot.setAttribute('aria-label', isActive ? `Slide ${index + 1} (activo)` : `Ir a slide ${index + 1}`);
+    });
+  }
+
+  startAutoplay() {
+    this.stopAutoplay();
+    this.autoplayInterval = setInterval(() => this.nextSlide(), CONFIG.carouselInterval || 5000);
+  }
+
+  stopAutoplay() {
+    if (this.autoplayInterval) {
+      clearInterval(this.autoplayInterval);
+      this.autoplayInterval = null;
+    }
+  }
+
+  destroy() {
+    // cleanup listeners and observers if needed
+    this.stopAutoplay();
+    if (this.resizeObserver) this.resizeObserver.disconnect();
+  }
+}
+
+/* =========================
+   LazyLoader class
+   ========================= */
+class LazyLoader {
+  constructor() {
+    this.elements = document.querySelectorAll('.lazy-load');
+    this.imageElements = document.querySelectorAll('img[loading="lazy"]');
+    this.init();
+  }
+
+  init() {
+    // Animation observer
+    const animationObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('loaded');
+          animationObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: `${CONFIG.lazyLoadOffset}px`
+    });
+
+    this.elements.forEach(el => {
+      animationObserver.observe(el);
+    });
+
+    // Image lazy observer
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      this.imageElements.forEach(img => {
+        if (img.dataset.src) {
+          imageObserver.observe(img);
+        }
+      });
+    } else {
+      // Fallback: load all images immediately
+      this.imageElements.forEach(img => {
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+        }
+      });
+    }
+  }
+}
+
+
+/* =========================
+   // Contador animado para las estadísticas
+   ========================= */
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 20);
+        }
+
+        // Activar animación cuando las estadísticas son visibles
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-item h3');
+                    statNumbers.forEach(stat => {
+                        const target = parseInt(stat.textContent.replace(/[,%]/g, ''));
+                        if (!isNaN(target)) {
+                            animateCounter(stat, target);
+                        }
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+/* =========================
+   Inicialización global
+   ========================= */
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    new Navigation();
+  } catch (err) {
+    // if header/navigation is missing, log and continue
+    console.warn('Navigation init failed:', err);
+  }
+
+  try {
+    new ProductCarousel();
+  } catch (err) {
+    console.warn('ProductCarousel init failed:', err);
+  }
+
+  try {
+    new LazyLoader();
+  } catch (err) {
+    console.warn('LazyLoader init failed:', err);
+  }
+});
+</script>
